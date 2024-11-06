@@ -58,7 +58,7 @@ public class AuthController {
         }
         return null;
     }
-
+    //Private Method
     private void authenticate(String username, String password) {
         UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(username, password);
         try{
