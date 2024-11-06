@@ -24,6 +24,7 @@ public class AuthController {
         this.manager = manager;
         this.jwtHelper = jwtHelper;
     }
+    //Post Call
 
     @PostMapping("/login")
     public ResponseEntity<JwtResponse> login(@RequestBody JwtRequest request){
@@ -36,6 +37,8 @@ public class AuthController {
                 .build();
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
+
+    //Get Call
 
     @GetMapping("/user")
     public ResponseEntity<UserDetails> getUserDetails(@RequestHeader("Authorization") String tokenHeader){
